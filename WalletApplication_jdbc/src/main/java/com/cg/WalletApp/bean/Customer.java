@@ -26,15 +26,11 @@ public class Customer implements Serializable {
 	@Embedded
 	private Wallet wallet ;
 	
-	
-
 	public Customer() {
 		wallet = new Wallet();
 		
 	}
 	
-
-
 
 	public Customer(String mobileNumber, String name, String password, String emailId, Wallet wallet) {
 		super();
@@ -45,9 +41,6 @@ public class Customer implements Serializable {
 		this.wallet = wallet;
 		
 	}
-
-
-
 
 	public String getMobileNumber() {
 		return mobileNumber;
@@ -91,8 +84,5 @@ public class Customer implements Serializable {
 	public void setWallet(Wallet wallet) {
 		this.wallet = wallet;
 	}
-
-
-
 
 }
