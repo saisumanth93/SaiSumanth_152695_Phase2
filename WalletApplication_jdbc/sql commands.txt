@@ -1,0 +1,19 @@
+CREATE TABLE CUSTOMER_WALLET
+(
+   Mobile_no varchar2(10), Email_ID  varchar2(30),
+   Customer_Name varchar2(30),Customer_Password varchar2(20), Balance number(19,2),
+    PRIMARY KEY (Mobile_no)
+);
+
+
+
+
+-----------------------------------------------------------------------------
+CREATE TABLE TRANSACTIONS
+	(
+	 ID int NOT NULL,Mobile_no varchar2(10) references customer_wallet(MOBILE_NO),
+	 TimeStampOfTrans Timestamp,
+	 Type char(10),Amount Number(19,2),PRIMARY KEY (ID)
+	);
+-----------------------------------------------------------------------------------
+CREATE SEQUENCE TRANSACTION_SEQUENCE START WITH 1 INCREMENT BY 1 ;
